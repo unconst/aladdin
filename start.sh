@@ -94,11 +94,11 @@ btcli s metagraph --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 if [ "$use_wandb" = true ]; then
     wandb login
     pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket --use_wandb
-    pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Alice --wallet.hotkey Bob --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket --use_wandb
-    pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Alice --wallet.hotkey Charlie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket --use_wandb
-    pm2 start miner.py --interpreter python3 --name Dave -- --wallet.name Alice --wallet.hotkey Dave --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:3 --bucket $bucket --use_wandb
-    pm2 start miner.py --interpreter python3 --name Eve -- --wallet.name Alice --wallet.hotkey Eve --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:4 --bucket $bucket --use_wandb
-    pm2 start miner.py --interpreter python3 --name Ferdie -- --wallet.name Alice --wallet.hotkey Ferdie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:5 --bucket $bucket --use_wandb
+    pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Alice --wallet.hotkey Bob --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket --use_wandb --learning_rate 0.00001
+    pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Alice --wallet.hotkey Charlie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket --use_wandb --learning_rate 0.00005
+    pm2 start miner.py --interpreter python3 --name Dave -- --wallet.name Alice --wallet.hotkey Dave --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:3 --bucket $bucket --use_wandb --learning_rate 0.0001
+    pm2 start miner.py --interpreter python3 --name Eve -- --wallet.name Alice --wallet.hotkey Eve --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:4 --bucket $bucket --use_wandb --learning_rate 0.0005
+    pm2 start miner.py --interpreter python3 --name Ferdie -- --wallet.name Alice --wallet.hotkey Ferdie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:5 --bucket $bucket --use_wandb --learning_rate 0.001
 else
     pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket
     pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Alice --wallet.hotkey Bob  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket
