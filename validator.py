@@ -161,6 +161,8 @@ def main( config ):
                 
                 # Uses an epsilon: (start_block - last_update_block)/temperature reduction.
                 # because we run the models in order of upload this puts the oldest model at an advantage.
+                # The epsilon decays slowly until it hits 0 as the temperature term.
+                # As time progresses the temperature gets pushed further and further out simulating a slower annealing.
                 block_epsilon = max(0, 1 - (start_block - last_update_block) / config.temperature)
                 threshold = best_loss - best_loss * block_epsilon
                 print (f'UID:{next_meta.uid}, Filename:{next_meta.filename}, BestLoss:{best_loss}, AvgLoss: {avg_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, ')
@@ -170,10 +172,10 @@ def main( config ):
                 # If the average loss is less than the threshold give all incentive to this miner and upload the new state.                          
                 if avg_loss < threshold:
                     best_loss = avg_loss
-                    # Make the epsilon decay period equivalent to the duration it took to improve the loss.
-                    # We use the start_block here rather than subtensor.block since this is when we started evalling the models.
+                    # Make the epsilon decay period equivalent to the duration it took to improve the loss x 2.
+                    # We use the start_block here rather than subtensor.block since this is when we started evaling the models.
                     # This will increase the temperature if we took a long time to beat the epsilon.
-                    config.temperature = start_block - last_update_block 
+                    config.temperature = (start_block - last_update_block) * 2 # Doubling works well.
                     last_update_block = start_block 
                     
                     # Upload the new best model.
@@ -188,7 +190,7 @@ def main( config ):
                         wallet = wallet,
                         netuid = config.netuid,
                         uids = [ next_uid ],
-                        weights = [ 1.0 ],
+                        weights = [ 1.0 ], # TODO (const): there might be something better than this possibly using a moving average?
                         wait_for_inclusion = False,
                         wait_for_finalization = False
                     )  
