@@ -162,12 +162,12 @@ def main( config ):
                 
                 # Uses an epsilon: (start_block - last_update_block)/temperature reduction.
                 # because we run the models in order of upload this puts the oldest model at an advantage.
-                # The epsilon decays slowly until it hits 0 as the temperature term.
+                # The epsilon decays slowly from config.epsilon until it hits 0 as the temperature term.
                 # As time progresses the temperature gets pushed further and further out simulating a slower annealing.
-                start_epsilon = 0.1 # Decreases from 0.1 -> 0 over the temperature period.
-                block_epsilon = max(0, start_epsilon - start_epsilon * (start_block - last_update_block) / config.temperature )
+                block_epsilon = max(0, config.epsilon  - config.epsilon  * (start_block - last_update_block) / config.temperature )
                 threshold = best_loss - best_loss * block_epsilon
-                print (f'UID:{next_meta.uid}, Filename:{next_meta.filename}, BestLoss:{best_loss}, AvgLoss: {avg_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, ')
+                dif = avg_loss - threshold
+                print (f'UID:{next_meta.uid}, Filename:{next_meta.filename}, BestLoss:{best_loss}, AvgLoss: {avg_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, Dif: {dif} ')
                 if config.use_wandb:
                     wandb.log({ "AvgLoss": avg_loss, 'Epsilon': block_epsilon, 'Threshold': threshold, 'BestLoss': best_loss })
                 
@@ -179,6 +179,7 @@ def main( config ):
                     # We use the start_block here rather than subtensor.block since this is when we started evaling the models.
                     # This will increase the temperature if we took a long time to beat the epsilon.
                     config.temperature = (start_block - last_update_block) * 2 # Doubling works well.
+                    config.epsilon = ( best_loss * block_epsilon ) * ( start_block - last_update_block ) # New epsilon is expected duration * increment
                     last_update_block = start_block 
                     
                     # Upload the new best model this is then pulled by all the miners.
@@ -226,7 +227,8 @@ if __name__ == "__main__":
     parser.add_argument('--name', type=str, default='miner', help='Name of the miner')
     parser.add_argument('--netuid', type=int, default=1, help='Bittensor network uid.')
     parser.add_argument('--bucket', type=str, default='decis', help='S3 bucket name')
-    parser.add_argument('--temperature', type=int, default=100, help='Epsilon half life.')
+    parser.add_argument('--temperature', type=int, default=100, help='Starting epsilon decay range.')
+    parser.add_argument('--epsilon', type=float, default=0.1, help='Starting epsilon value.')
     parser.add_argument('--batch_size', type=int, default=6, help='Batch size for training')
     parser.add_argument('--sequence_length', type=int, default=2048, help='Sequence Length.')
     parser.add_argument('--tokenizer_name', type=str, default='gpt2', help='Tokenizer name.')
