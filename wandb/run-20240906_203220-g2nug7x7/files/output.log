@@ -1,0 +1,216 @@
+
+Downloading model from model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis
+Error: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+ Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: PytorchStreamReader failed reading file byteorder: invalid header or archive is corrupted
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+Downloading model from model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis
+/home/ubuntu/frontend/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:654: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Downloaded model from model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis in 45.81919980049133 seconds.
+Processing batches: 3it [00:01,  2.14it/s]
+Loss: 9.789324760437012
+Loss: 3.8779494762420654
+Loss: 3.0184524059295654
+Loss: 6.458346843719482
+
+Processing batches: 8it [00:03,  2.27it/s]
+Loss: 3.007647752761841
+Loss: 3.6948602199554443
+Loss: 3.793597459793091
+
+Processing batches: 12it [00:05,  2.28it/s]
+Loss: 2.2160606384277344
+Loss: 4.186820030212402
+Loss: 2.2927191257476807
+Loss: 4.242499351501465
+
+Processing batches: 17it [00:07,  2.29it/s]
+Loss: 2.915778160095215
+Loss: 1.9678083658218384
+Loss: 2.3980329036712646
+
+Processing batches: 22it [00:09,  2.29it/s]
+Loss: 2.6688103675842285
+Loss: 4.029782295227051
+Loss: 2.503847360610962
+Loss: 3.691108465194702
+
+Processing batches: 26it [00:11,  2.28it/s]
+Loss: 3.168419361114502
+Loss: 2.708164691925049
+Loss: 3.5413708686828613
+
+Processing batches: 31it [00:13,  2.28it/s]
+Loss: 3.241091728210449
+Loss: 3.1818654537200928
+Loss: 2.154620885848999
+Loss: 2.898660182952881
+
+Processing batches: 35it [00:15,  2.28it/s]
+Loss: 2.424323797225952
+Loss: 3.5214903354644775
+Loss: 2.1003262996673584
+Loss: 2.4950783252716064
+
+Processing batches: 40it [00:17,  2.27it/s]
+Loss: 2.733839988708496
+Loss: 3.2622978687286377
+Loss: 2.7766170501708984
+
+Processing batches: 44it [00:19,  2.27it/s]
+Loss: 2.4527552127838135
+Loss: 2.1458523273468018
+Loss: 2.11828875541687
+Loss: 2.531151533126831
+
+Processing batches: 49it [00:21,  2.26it/s]
+Loss: 1.7214086055755615
+Loss: 2.400643825531006
+
+Processing batches: 53it [00:23,  2.25it/s]
+Loss: 1.9964107275009155
+Loss: 2.733227491378784
+Loss: 3.3291969299316406
+Loss: 2.6524930000305176
+
+Processing batches: 58it [00:25,  2.25it/s]
+Loss: 2.26655912399292
+Loss: 2.0340771675109863
+Loss: 2.775893211364746
+
+Processing batches: 62it [00:27,  2.24it/s]
+Loss: 2.4757931232452393
+Loss: 2.100001096725464
+Loss: 2.344369411468506
+Loss: 2.503821849822998
+
+Processing batches: 67it [00:29,  2.23it/s]
+Loss: 2.1164164543151855
+Loss: 2.254260778427124
+Loss: 2.3614752292633057
+
+Processing batches: 71it [00:31,  2.23it/s]
+Loss: 2.8947439193725586
+Loss: 1.5274423360824585
+Loss: 2.0188190937042236
+Loss: 2.8468801975250244
+
+Processing batches: 76it [00:33,  2.22it/s]
+Loss: 2.7474308013916016
+Loss: 2.7422685623168945
+Loss: 2.977907180786133
+
+Processing batches: 80it [00:35,  2.22it/s]
+Loss: 2.0068442821502686
+Loss: 1.9145190715789795
+Loss: 2.3165371417999268
+
+Processing batches: 83it [00:36,  2.25it/s]
+Loss: 3.148049831390381
+Loss: 1.6923067569732666
+Loss: 1.7452210187911987
+Uploading model to model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Uploaded model to model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 3.8103718757629395 seconds.
+Processing batches: 1it [00:00,  2.31it/s]
+
+Processing batches: 5it [00:02,  2.23it/s]
+Loss: 2.2033181190490723
+Loss: 2.730677604675293
+Loss: 2.894620895385742
+
+Processing batches: 10it [00:04,  2.23it/s]
+Loss: 2.7413389682769775
+Loss: 1.5000014305114746
+Loss: 2.3407645225524902
+Loss: 1.2392536401748657
+
+Processing batches: 14it [00:06,  2.23it/s]
+Loss: 2.290815830230713
+Loss: 2.2759554386138916
+Loss: 1.8799448013305664
+
+Processing batches: 18it [00:08,  2.23it/s]
+Loss: 1.671068549156189
+Loss: 2.5690062046051025
+Loss: 2.0450031757354736
+Loss: 1.9778404235839844
+
+Processing batches: 23it [00:10,  2.22it/s]
+Loss: 1.7435534000396729
+Loss: 2.5007503032684326
+Loss: 1.5906320810317993
+
+Processing batches: 27it [00:12,  2.22it/s]
+Loss: 1.5360113382339478
+Loss: 1.9334367513656616
+Loss: 3.153799533843994
+Loss: 1.8880449533462524
+
+Processing batches: 32it [00:14,  2.22it/s]
+Loss: 2.5338313579559326
+Loss: 3.0422523021698
+Loss: 3.0855963230133057
+
+Processing batches: 36it [00:16,  2.22it/s]
+Loss: 1.3839213848114014
+Loss: 2.838766098022461
+Loss: 2.1503448486328125
+
+Processing batches: 41it [00:18,  2.21it/s]
+Loss: 2.546327829360962
+Loss: 3.3155996799468994
+Loss: 2.8935678005218506
+Loss: 2.487058162689209
+
+Processing batches: 45it [00:20,  2.21it/s]
+Loss: 2.5486879348754883
+Loss: 2.740658760070801
+Loss: 1.993029236793518
+
+Processing batches: 50it [00:22,  2.20it/s]
+Loss: 2.150360345840454
+Loss: 2.704662799835205
+Loss: 2.193429946899414
+Loss: 2.532805919647217
+
+Processing batches: 54it [00:24,  2.21it/s]
+Loss: 2.7445342540740967
+Loss: 2.192897081375122
+Loss: 1.161863088607788
+
+Processing batches: 58it [00:26,  2.20it/s]
+Loss: 1.8300172090530396
+Loss: 1.5890871286392212
+Loss: 1.6849883794784546
+
+Processing batches: 63it [00:28,  2.20it/s]
+Loss: 2.648799180984497
+Loss: 2.277791976928711
+Loss: 2.4312055110931396
+Loss: 1.9643970727920532
+
+Processing batches: 67it [00:30,  2.19it/s]
+Loss: 1.8850352764129639
+Loss: 2.101879835128784
+Loss: 2.699923276901245
+
+Processing batches: 72it [00:32,  2.19it/s]
+Loss: 2.5727615356445312
+Loss: 2.085847854614258
+Loss: 2.9517805576324463
+Loss: 2.9286885261535645
+
+Processing batches: 76it [00:34,  2.19it/s]
+Loss: 2.3817455768585205
+Loss: 2.5063676834106445
+Loss: 2.5262527465820312
+
+Processing batches: 80it [00:36,  2.19it/s]
+Loss: 2.3410403728485107
+Loss: 1.9654669761657715
+Loss: 2.3835527896881104
+
+Processing batches: 83it [00:37,  2.21it/s]
+Loss: 2.721928358078003
+Loss: 2.352055072784424
+Loss: 2.743187189102173

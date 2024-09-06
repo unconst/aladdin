@@ -1,0 +1,335 @@
+
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+/home/ubuntu/frontend/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:654: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 39.223363161087036 seconds.
+
+Processing batches: 33it [00:02, 13.16it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.780467076735063, Epsilon: 0.02732372244729256 Threshold: 9726762.775527075
+Uploading model to model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis
+Uploaded model to model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis in 3.403334617614746 seconds.
+[34m2024-09-06 20:02:12.582[39m | [33m[1m    WARNING     [39m[22m | {'code': 1010, 'message': 'Invalid Transaction', 'data': 'Transaction has a bad signature'} - %s, retrying in %s seconds... - 1
+[34m2024-09-06 20:02:13.592[39m | [33m[1m    WARNING     [39m[22m | {'code': 1010, 'message': 'Invalid Transaction', 'data': 'Transaction has an ancient birth block'} - %s, retrying in %s seconds... - 2
+[34m2024-09-06 20:02:15.621[39m | [33m[1m    WARNING     [39m[22m | {'code': 1014, 'message': 'Priority is too low: (18446744073709551615 vs 18446744073709551615)', 'data': 'The transaction has too low priority to replace another transaction already in the pool.'} - %s, retrying in %s seconds... - 1
+[34m2024-09-06 20:02:16.631[39m | [33m[1m    WARNING     [39m[22m | {'code': 1010, 'message': 'Invalid Transaction', 'data': 'Transaction has a bad signature'} - %s, retrying in %s seconds... - 2
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 12it [00:00, 14.51it/s]
+
+Processing batches: 33it [00:02, 14.21it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 7.248961838808927, Epsilon: 0.029013327082197053 Threshold: 5.612756494749878
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 2it [00:00, 14.71it/s]
+
+Processing batches: 30it [00:02, 14.02it/s]
+
+Processing batches: 33it [00:02, 14.17it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 4it [00:00, 14.56it/s]
+
+Processing batches: 33it [00:02, 14.19it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.562100518833507, Epsilon: 0.006345559512909116 Threshold: 5.743786778887229
+Uploading model to model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis
+Uploaded model to model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis in 3.2784855365753174 seconds.
+[34m2024-09-06 20:02:57.794[39m | [33m[1m    WARNING     [39m[22m | {'code': 1010, 'message': 'Invalid Transaction', 'data': 'Transaction has a bad signature'} - %s, retrying in %s seconds... - 1
+[34m2024-09-06 20:02:58.827[39m | [33m[1m    WARNING     [39m[22m | {'code': 1014, 'message': 'Priority is too low: (18446744073709551615 vs 18446744073709551615)', 'data': 'The transaction has too low priority to replace another transaction already in the pool.'} - %s, retrying in %s seconds... - 1
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 0it [00:00, ?it/s]
+
+Processing batches: 28it [00:01, 14.15it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.437915715304288, Epsilon: 0.0030579821764233073 Threshold: 5.545091714583439
+
+Processing batches: 33it [00:02, 14.20it/s]
+Uploaded model to model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis in 4.299266815185547 seconds.
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 8it [00:00, 14.41it/s]
+
+Processing batches: 33it [00:02, 14.13it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 4.8373197714487715, Epsilon: 0.0018363047770289071 Threshold: 5.4279300446991945
+Uploading model to model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis
+Uploaded model to model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis in 3.6843318939208984 seconds.
+[34m2024-09-06 20:03:35.952[39m | [33m[1m    WARNING     [39m[22m | {'code': 1014, 'message': 'Priority is too low: (18446744073709551615 vs 18446744073709551615)', 'data': 'The transaction has too low priority to replace another transaction already in the pool.'} - %s, retrying in %s seconds... - 1
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 8it [00:00, 14.55it/s]
+
+Processing batches: 33it [00:02, 14.16it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.490984685493238, Epsilon: 0.0011708796207911744 Threshold: 4.831655852309132
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.994398832321167 seconds.
+Processing batches: 20it [00:01, 13.96it/s]
+
+Processing batches: 33it [00:02, 14.11it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 8it [00:00, 14.44it/s]
+
+Processing batches: 33it [00:02, 14.11it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.409412123940208, Epsilon: 0.0005004514334406108 Threshold: 4.834898927835139
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 6.274946451187134 seconds.
+
+Processing batches: 33it [00:02, 14.15it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 6.099884921854192, Epsilon: 0.00032554820892043796 Threshold: 4.835744990661201
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.986212730407715 seconds.
+
+Processing batches: 33it [00:02, 14.14it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.437357476263335, Epsilon: 0.00023404433376915794 Threshold: 4.8361876241656345
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 10it [00:00, 14.51it/s]
+
+Processing batches: 33it [00:02, 14.15it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.6208290548035595, Epsilon: 0.00016492825447327666 Threshold: 4.836521960742537
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 12it [00:00, 14.53it/s]
+
+Processing batches: 33it [00:02, 14.20it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.44748322168986, Epsilon: 0.00011976249317201468 Threshold: 4.8367404419726725
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 6.927449703216553 seconds.
+Processing batches: 22it [00:01, 14.07it/s]
+
+Processing batches: 33it [00:02, 14.13it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.303750991821289 seconds.
+
+Processing batches: 33it [00:02, 14.22it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.082307374838627, Epsilon: 5.2222349675744776e-05 Threshold: 4.837067155244173
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 12it [00:00, 14.52it/s]
+
+Processing batches: 33it [00:02, 14.22it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.547518997481375, Epsilon: 3.465737542501435e-05 Threshold: 4.837152122641402
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 4it [00:00, 14.62it/s]
+
+Processing batches: 33it [00:02, 14.21it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.779935157660282, Epsilon: 2.4916009731503204e-05 Threshold: 4.837199244742272
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 6.007362127304077 seconds.
+Processing batches: 20it [00:01, 14.02it/s]
+
+Processing batches: 33it [00:02, 14.20it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 4it [00:00, 14.23it/s]
+
+Processing batches: 32it [00:02, 14.09it/s]
+
+Processing batches: 33it [00:02, 14.19it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 12it [00:00, 14.35it/s]
+
+Processing batches: 33it [00:02, 14.14it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.174938324725989, Epsilon: 7.810824733562767e-06 Threshold: 4.837281987991856
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.2282187938690186 seconds.
+
+Processing batches: 33it [00:02, 14.19it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.461742769588124, Epsilon: 5.341521609404953e-06 Threshold: 4.837293932800681
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 4.63724160194397 seconds.
+Processing batches: 20it [00:01, 13.97it/s]
+
+Processing batches: 33it [00:02, 14.22it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 0it [00:00, ?it/s]
+
+Processing batches: 28it [00:01, 14.23it/s]
+
+Processing batches: 33it [00:02, 14.17it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.97155499458313 seconds.
+Processing batches: 26it [00:01, 14.32it/s]
+
+Processing batches: 33it [00:02, 14.22it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 5.775440216064453 seconds.
+Processing batches: 26it [00:01, 14.31it/s]
+
+Processing batches: 33it [00:02, 14.14it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.670928955078125 seconds.
+
+Processing batches: 33it [00:02, 14.22it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.834091554988515, Epsilon: 9.189813578979571e-07 Threshold: 4.837315326042079
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.271136283874512 seconds.
+
+Processing batches: 33it [00:02, 14.25it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.494091915361809, Epsilon: 6.222026459004709e-07 Threshold: 4.837316761655611
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 5.596722602844238 seconds.
+
+Processing batches: 33it [00:02, 14.16it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.247820124481663, Epsilon: 4.4731624914198925e-07 Threshold: 4.837317607637035
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.7784740924835205 seconds.
+
+Processing batches: 33it [00:02, 14.24it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.424826470288363, Epsilon: 3.248182635818706e-07 Threshold: 4.837318200198963
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 0it [00:00, ?it/s]
+
+Processing batches: 28it [00:01, 14.21it/s]
+
+Processing batches: 33it [00:02, 14.19it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 12it [00:00, 14.65it/s]
+
+Processing batches: 33it [00:02, 14.24it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.338822791070649, Epsilon: 1.6788275299956632e-07 Threshold: 4.837318959346211
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 2it [00:00, 14.16it/s]
+
+Processing batches: 30it [00:02, 14.14it/s]
+
+Processing batches: 33it [00:02, 14.21it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 12it [00:00, 14.54it/s]
+
+Processing batches: 33it [00:02, 14.24it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.101523088686394, Epsilon: 7.175559544867455e-08 Threshold: 4.8373194243440105
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 8it [00:00, 14.40it/s]
+
+Processing batches: 33it [00:02, 14.15it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.613209327061971, Epsilon: 5.107350333252634e-08 Threshold: 4.837319524389904
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 2it [00:00, 14.86it/s]
+
+Processing batches: 30it [00:02, 14.07it/s]
+
+Processing batches: 33it [00:02, 14.23it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 2it [00:00, 14.52it/s]
+
+Processing batches: 32it [00:02, 14.07it/s]
+
+Processing batches: 33it [00:02, 14.24it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 12it [00:00, 14.47it/s]
+
+Processing batches: 33it [00:02, 14.19it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.139421426888668, Epsilon: 1.9555681087850496e-08 Threshold: 4.837319676851688
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 5.221033811569214 seconds.
+
+Processing batches: 33it [00:02, 14.20it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.375478267669678, Epsilon: 1.3240308316022919e-08 Threshold: 4.837319707401166
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 6.732135772705078 seconds.
+Processing batches: 24it [00:01, 14.27it/s]
+
+Processing batches: 33it [00:02, 14.28it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 8it [00:00, 14.59it/s]
+
+
+Processing batches: 33it [00:02, 14.22it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.164667693051425, Epsilon: 6.843271022217988e-09 Threshold: 4.837319738345681
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 4.825133562088013 seconds.
+
+Processing batches: 33it [00:02, 14.22it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.189814148527203, Epsilon: 5.069619862322287e-09 Threshold: 4.837319746925399
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 6it [00:00, 14.61it/s]
+
+Processing batches: 33it [00:02, 14.25it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.025894584077777, Epsilon: 3.5369537601217412e-09 Threshold: 4.837319754339395
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 4it [00:00, 14.68it/s]
+
+Processing batches: 32it [00:02, 14.02it/s]
+
+Processing batches: 33it [00:02, 14.24it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 4.765775203704834 seconds.
+Processing batches: 26it [00:01, 14.30it/s]
+
+Processing batches: 33it [00:02, 14.28it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 7.110295295715332 seconds.
+Processing batches: 26it [00:01, 14.39it/s]
+
+Processing batches: 33it [00:02, 14.24it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.676321506500244 seconds.
+Processing batches: 26it [00:01, 14.33it/s]
+
+Processing batches: 33it [00:02, 14.22it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 10it [00:00, 14.64it/s]
+
+Processing batches: 33it [00:02, 14.27it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.40111509958903, Epsilon: 6.208075409403624e-10 Threshold: 4.8373197684457265
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 10it [00:00, 14.57it/s]
+
+Processing batches: 33it [00:02, 14.24it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.040917642188795, Epsilon: 4.4631327507553787e-10 Threshold: 4.837319769289811
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 0it [00:00, ?it/s]
+
+Processing batches: 28it [00:01, 14.23it/s]
+
+Processing batches: 33it [00:02, 14.25it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 2it [00:00, 14.63it/s]
+
+Processing batches: 32it [00:02, 14.02it/s]
+
+Processing batches: 33it [00:02, 14.22it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 6it [00:00, 14.61it/s]
+
+Processing batches: 33it [00:02, 14.28it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.649233167821711, Epsilon: 1.67506325700567e-10 Threshold: 4.83731977063849
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 6.227365016937256 seconds.
+Processing batches: 22it [00:01, 14.22it/s]
+
+Processing batches: 33it [00:02, 14.20it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 0it [00:00, ?it/s]
+
+Processing batches: 28it [00:01, 14.24it/s]
+
+Processing batches: 33it [00:02, 14.25it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 12it [00:00, 14.58it/s]
+
+Processing batches: 33it [00:02, 14.24it/s]
+UID:1, Filename:model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt, AvgLoss: 5.462321397029992, Epsilon: 5.5758012162231333e-11 Threshold: 4.837319771179052
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.754217863082886 seconds.
+Processing batches: 22it [00:01, 14.19it/s]
+
+Processing batches: 33it [00:02, 14.28it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 2it [00:00, 14.73it/s]
+
+Processing batches: 30it [00:02, 14.19it/s]
+
+Processing batches: 33it [00:02, 14.29it/s]
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Processing batches: 2it [00:00, 14.79it/s]
+
+Processing batches: 30it [00:02, 14.16it/s]
+
+Processing batches: 33it [00:02, 14.25it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Downloaded model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis in 4.680629730224609 seconds.
+
+Processing batches: 33it [00:02, 14.25it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.393957911115704, Epsilon: 1.3343389796997741e-11 Threshold: 4.837319771384225
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Downloaded model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 5.074843645095825 seconds.
+Processing batches: 26it [00:01, 14.36it/s]
+
+Processing batches: 33it [00:02, 14.25it/s]
+Downloading model from model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt@decis
+Processing batches: 4it [00:00, 14.73it/s]
+
+Processing batches: 33it [00:02, 14.29it/s]
+UID:2, Filename:model-5HbJP2BqiPjpp1VvmfukRgNovAn6QuzFvEF4xpi1fHdBhRvV.pt, AvgLoss: 5.378987738580415, Epsilon: 5.935914581951324e-12 Threshold: 4.8373197714200575
+Downloading model from model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+[34m2024-09-06 20:13:39.065[39m | [33m[1m    WARNING     [39m[22m | [Errno 111] Connection refused - %s, retrying in %s seconds... - 1
