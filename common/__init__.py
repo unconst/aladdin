@@ -20,25 +20,17 @@ import io
 import os
 import math
 import time
-import json
-import boto3
 import torch
-import wandb
-import typer
 import pickle
 import base64
-import random
-import argparse
 import tempfile
 import bittensor as bt
-from tqdm import tqdm
-import torch.optim as optim
-from dotenv import dotenv_values
 from types import SimpleNamespace
-from dataset import SubsetFineWebEdu2Loader
-from transformers import AutoTokenizer
 from transformers import GPT2Config, GPT2LMHeadModel
 from typing import Dict, List, Optional, Tuple
+
+# Load in tooling.
+from .dataset import SubsetFineWebEdu2Loader
 
 # Encode extras using pickle and base64 to ensure they are strings
 def encode_extras(extras: Dict[str, object]) -> Dict[str, str]:

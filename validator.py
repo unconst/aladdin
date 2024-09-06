@@ -27,12 +27,11 @@ import bittensor as bt
 from tqdm import tqdm
 from dotenv import dotenv_values
 from types import SimpleNamespace
-from dataset import SubsetFineWebEdu2Loader
 from transformers import AutoTokenizer
 from transformers import GPT2Config, GPT2LMHeadModel
 from typing import Dict, Optional
 
-from common import upload_model, get_metadata, download_model
+from common import upload_model, get_metadata, download_model, SubsetFineWebEdu2Loader
 
 # Instantiate my S3 client.
 env_config = {**dotenv_values(".env"), **os.environ}
@@ -100,8 +99,7 @@ def main( config ):
         
     # Remember delta for later removal.
     last_update_block = 0
-    best_loss = 10000000 # Infinity.
-    epsilon = 0.1
+    best_loss = 15 # Basically Infinity.
     while True:
         try:
             
@@ -119,20 +117,20 @@ def main( config ):
                 continue
             elif config.use_wandb:
                 wandb.log({ "n_miners": len(list(metadata.keys())) })
+                
+            # Load the next dataset pages for eval here making the pages consistent for each miner
+            dataset = SubsetFineWebEdu2Loader( 
+                batch_size = config.batch_size, 
+                sequence_length = config.sequence_length,
+                num_pages = config.num_pages, 
+                tokenizer = tokenizer
+            )
             
             # Sort the metadata by older models first.
-            metadata = dict(sorted(metadata.items(), key=lambda item: item[1].blocks_since_modified, reverse=True))
+            start_block = subtensor.block # Record this for consistent reduction for all miners.
+            # Run through the models based on last_modified.
+            metadata = dict(sorted(metadata.items(), key=lambda item: item[1].last_modified, reverse=True))
             for next_uid, next_meta in metadata.items():
-                
-                # Load the next dataset pages.
-                # TODO (macrocosmos): make the pages consistent for each miner
-                # Dont randomize these.
-                dataset = SubsetFineWebEdu2Loader( 
-                    batch_size = config.batch_size, 
-                    sequence_length = config.sequence_length,
-                    num_pages = config.num_pages, 
-                    tokenizer = tokenizer
-                )
                 
                 # Load the model.
                 try:
@@ -158,20 +156,27 @@ def main( config ):
                     outputs = model( input_ids=input_ids, labels=labels )
                     losses.append( outputs.loss.item() )
                     
-                # Avg loss
+                # Compute the avg loss on all batches from all pages.
                 avg_loss = sum( losses ) / len( losses )
-                block_epsilon = max(0, 1 - (subtensor.block - min(last_update_block, next_meta.blocks_since_modified)) / config.temperature)
+                
+                # Uses an epsilon: (start_block - last_update_block)/temperature reduction.
+                # because we run the models in order of upload this puts the oldest model at an advantage.
+                block_epsilon = max(0, 1 - (start_block - last_update_block) / config.temperature)
                 threshold = best_loss - best_loss * block_epsilon
                 print (f'UID:{next_meta.uid}, Filename:{next_meta.filename}, BestLoss:{best_loss}, AvgLoss: {avg_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, ')
                 if config.use_wandb:
                     wandb.log({ "AvgLoss": avg_loss, 'Epsilon': block_epsilon, 'Threshold': threshold, 'BestLoss': best_loss })
                 
-                # If the average loss is less than the threshold give all incentive to this miner and upload.                           
+                # If the average loss is less than the threshold give all incentive to this miner and upload the new state.                          
                 if avg_loss < threshold:
                     best_loss = avg_loss
-                    # Make the epsilon decay period equivalent to the duration it took to imporve the loss.
-                    config.temperature = subtensor.block - last_update_block 
-                    last_update_block = subtensor.block
+                    # Make the epsilon decay period equivalent to the duration it took to improve the loss.
+                    # We use the start_block here rather than subtensor.block since this is when we started evalling the models.
+                    # This will increase the temperature if we took a long time to beat the epsilon.
+                    config.temperature = start_block - last_update_block 
+                    last_update_block = start_block 
+                    
+                    # Upload the new best model.
                     upload_model(
                         wallet = wallet, 
                         model = model, 
@@ -189,6 +194,9 @@ def main( config ):
                     )  
                     if config.use_wandb:
                         wandb.log({ "BestUID": next_uid, "Temperature": config.temperature })
+                        
+                    # Break the loop here. This gives the earlier miners the advantage.
+                    break
 
                                             
         # Handle keyboard interrupts, stops training gracefully.

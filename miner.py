@@ -30,12 +30,12 @@ from tqdm import tqdm
 import torch.optim as optim
 from dotenv import dotenv_values
 from types import SimpleNamespace
-from dataset import SubsetFineWebEdu2Loader
 from transformers import AutoTokenizer
 from transformers import GPT2Config, GPT2LMHeadModel
 from typing import Dict, List, Optional, Tuple
 
-from common import upload_model, get_metadata, download_model
+# Import common tooling.
+from common import upload_model, get_metadata, download_model, SubsetFineWebEdu2Loader
 
 # Instantiate my S3 client.
 env_config = {**dotenv_values(".env"), **os.environ}
@@ -78,7 +78,6 @@ def main( config ):
     if config.use_wandb:
         wandb.init(project='aladdin', name = f'{wallet.name}-{wallet.hotkey_str}', config = config )
         
-
     # Main training loop.
     model = None
     current = None
