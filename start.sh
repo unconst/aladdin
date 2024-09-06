@@ -1,3 +1,8 @@
+pm2 delete all
+
+# Super hacky way of setting these vars.
+sed -i 's/Self::set_target_registrations_per_interval(netuid, 1);/Self::set_target_registrations_per_interval(netuid, 10);/' subtensor/pallets/subtensor/src/coinbase/root.rs
+
 # Parse command line arguments for --bucket and --use-wandb
 while [[ "$#" -gt 0 ]]; do
     case $1 in
@@ -43,40 +48,40 @@ done
 
 # Create Alice, Bob, Charlie, Dave, Eve, Ferdie
 echo "Creating wallets for Alice, Bob, Charlie, Dave, Eve, and Ferdie ..."
-python3 -c "import bittensor as bt; w = bt.wallet('Alice'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_hotkey_from_uri('/Alice', overwrite=True, use_password = False, suppress = True); print(w)"
-python3 -c "import bittensor as bt; w = bt.wallet('Bob'); w.create_coldkey_from_uri('//Bob', overwrite=True, use_password = False, suppress = True); w.create_hotkey_from_uri('/Bob', overwrite=True, use_password = False, suppress = True); print(w)"
-python3 -c "import bittensor as bt; w = bt.wallet('Charlie'); w.create_coldkey_from_uri('//Charlie', overwrite=True, use_password = False, suppress = True); w.create_hotkey_from_uri('/Charlie', overwrite=True, use_password = False, suppress = True); print(w)"
-# python3 -c "import bittensor as bt; w = bt.wallet('Dave'); w.create_coldkey_from_uri('//Dave', overwrite=True, use_password = False, suppress = True); w.create_hotkey_from_uri('/Dave', overwrite=True, use_password = False, suppress = True); print(w)"
-# python3 -c "import bittensor as bt; w = bt.wallet('Eve'); w.create_coldkey_from_uri('//Eve', overwrite=True, use_password = False, suppress = True); w.create_hotkey_from_uri('/Eve', overwrite=True, use_password = False, suppress = True); print(w)"
-# python3 -c "import bittensor as bt; w = bt.wallet('Ferdie'); w.create_coldkey_from_uri('//Ferdie', overwrite=True, use_password = False, suppress = True); w.create_hotkey_from_uri('/Ferdie', overwrite=True, use_password = False, suppress = True); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Alice'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Bob'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Charlie'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Dave'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Eve'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Ferdie'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
 
 echo "Creating subnet 1 ... "
-btcli s create --wallet.name Alice --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli s create --wallet.name Alice --wallet.hotkey Alice --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 
 echo "Setting Hparams ..."
 btcli sudo set --wallet.name Alice --netuid 1 --param 'min_allowed_weights' --value 0 --subtensor.chain_endpoint ws://127.0.0.1:9946
 btcli sudo set --wallet.name Alice --netuid 1 --param 'max_weight_limit' --value 65535 --subtensor.chain_endpoint ws://127.0.0.1:9946
 
 echo "Registering Keys to subnet 1 ... "
-btcli s register --netuid 1 --wallet.name Alice --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-btcli s register --netuid 1 --wallet.name Bob --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-btcli s register --netuid 1 --wallet.name Charlie --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-# btcli s register --netuid 1 --wallet.name Dave --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-# btcli s register --netuid 1 --wallet.name Eve --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-# btcli s register --netuid 1 --wallet.name Ferdie --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli s register --netuid 1 --wallet.name Alice --wallet.hotkey Alice --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli s register --netuid 1 --wallet.name Alice --wallet.hotkey Bob --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli s register --netuid 1 --wallet.name Alice --wallet.hotkey Charlie --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli s register --netuid 1 --wallet.name Alice --wallet.hotkey Dave --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli s register --netuid 1 --wallet.name Alice --wallet.hotkey Eve --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli s register --netuid 1 --wallet.name Alice --wallet.hotkey Ferdie --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 
 echo "Adding Stake ..."
-btcli stake add --amount 10000 --wallet.name Alice --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-btcli stake add --amount 1000 --wallet.name Bob --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-btcli stake add --amount 100 --wallet.name Charlie --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+btcli stake add --amount 10000 --wallet.name Alice --wallet.hotkey Alice --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+# btcli stake add --amount 1000 --wallet.name Bob --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+# btcli stake add --amount 100 --wallet.name Charlie --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 # btcli stake add --all --wallet.name Dave --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 # btcli stake add --all --wallet.name Eve --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 # btcli stake add --all --wallet.name Ferdie --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 
-echo "Registering Keys to root 0 ..."
-btcli root register --netuid 0 --wallet.name Alice --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-btcli root register --netuid 0 --wallet.name Bob --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
-btcli root register --netuid 0 --wallet.name Charlie --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+# echo "Registering Keys to root 0 ..."
+# btcli root register --netuid 0 --wallet.name Alice --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+# btcli root register --netuid 0 --wallet.name Bob --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
+# btcli root register --netuid 0 --wallet.name Charlie --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 
 # echo "Setting root weights ... "
 # btcli root weights --netuids 1 --weights 1 --wallet.name Alice --wallet.hotkey default --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
@@ -85,20 +90,23 @@ btcli root register --netuid 0 --wallet.name Charlie --wallet.hotkey default --n
 
 btcli s metagraph --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 
-
+# Start all.
 if [ "$use_wandb" = true ]; then
     wandb login
-    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket --use_wandb
-    pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Bob --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket --use_wandb
-    pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Charlie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket --use_wandb
+    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket --use_wandb
+    pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Alice --wallet.hotkey Bob --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket --use_wandb
+    pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Alice --wallet.hotkey Charlie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket --use_wandb
+    pm2 start miner.py --interpreter python3 --name Dave -- --wallet.name Alice --wallet.hotkey Dave --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:3 --bucket $bucket --use_wandb
+    pm2 start miner.py --interpreter python3 --name Eve -- --wallet.name Alice --wallet.hotkey Eve --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:4 --bucket $bucket --use_wandb
+    pm2 start miner.py --interpreter python3 --name Ferdie -- --wallet.name Alice --wallet.hotkey Ferdie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:5 --bucket $bucket --use_wandb
 else
-    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket
-    pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Bob --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket
-    pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Charlie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket
+    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket
+    pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Alice --wallet.hotkey Bob  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket
+    pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Alice --wallet.hotkey Charlie  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket
+    pm2 start miner.py --interpreter python3 --name Dave -- --wallet.name Alice --wallet.hotkey Dave  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:3 --bucket $bucket
+    pm2 start miner.py --interpreter python3 --name Eve -- --wallet.name Alice --wallet.hotkey Eve  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:4 --bucket $bucket
+    pm2 start miner.py --interpreter python3 --name Ferdie -- --wallet.name Alice --wallet.hotkey Ferdie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:5 --bucket $bucket
 fi
-
-
-# Start all.
 
 # Log the validator
 pm2 logs Alice
