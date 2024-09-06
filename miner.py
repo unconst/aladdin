@@ -98,11 +98,12 @@ def main( config ):
                 model = download_model( metadata = current, device = config.device, CLIENT = CLIENT )
                 tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained( current.tokenizer_name, verbose=False, clean_up_tokenization_spaces=True )
                 tokenizer.pad_token = tokenizer.eos_token    
+                def random_perturbation(value, perturbation=0.25): return value * (1 + random.uniform(-perturbation, perturbation))
                 optimizer = optim.AdamW(
                     model.parameters(),
-                    lr = config.learning_rate,  # Peak learning rate
-                    betas = ( config.optimizer_beta1, config.optimizer_beta2 ), # B1 and B2
-                    weight_decay = config.optimizer_weight_decay  # Weight decay
+                    lr = random_perturbation(config.learning_rate),  # Peak learning rate with pertubation.
+                    betas = ( random_perturbation(config.optimizer_beta1), random_perturbation(config.optimizer_beta2) ), # B1 and B2
+                    weight_decay = random_perturbation(config.optimizer_weight_decay)  # Weight decay
                 )
                 
             # Load training dataset pages.
