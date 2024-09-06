@@ -122,13 +122,14 @@ def main( config ):
             dataset = SubsetFineWebEdu2Loader( 
                 batch_size = config.batch_size, 
                 sequence_length = config.sequence_length,
-                num_pages = config.num_pages, 
+                num_pages = config.num_pages, # TODO adapt the number of pages as well.
                 tokenizer = tokenizer
             )
             
             # Sort the metadata by older models first.
             start_block = subtensor.block # Record this for consistent reduction for all miners.
             # Run through the models based on last_modified.
+            # TODO(const): note that the last modified can change during the eval.
             metadata = dict(sorted(metadata.items(), key=lambda item: item[1].last_modified, reverse=True))
             for next_uid, next_meta in metadata.items():
                 
@@ -163,7 +164,8 @@ def main( config ):
                 # because we run the models in order of upload this puts the oldest model at an advantage.
                 # The epsilon decays slowly until it hits 0 as the temperature term.
                 # As time progresses the temperature gets pushed further and further out simulating a slower annealing.
-                block_epsilon = max(0, 1 - (start_block - last_update_block) / config.temperature)
+                start_epsilon = 0.1 # Decreases from 0.1 -> 0 over the temperature period.
+                block_epsilon = max(0, start_epsilon - start_epsilon * (start_block - last_update_block) / config.temperature )
                 threshold = best_loss - best_loss * block_epsilon
                 print (f'UID:{next_meta.uid}, Filename:{next_meta.filename}, BestLoss:{best_loss}, AvgLoss: {avg_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, ')
                 if config.use_wandb:
@@ -172,13 +174,14 @@ def main( config ):
                 # If the average loss is less than the threshold give all incentive to this miner and upload the new state.                          
                 if avg_loss < threshold:
                     best_loss = avg_loss
+                    
                     # Make the epsilon decay period equivalent to the duration it took to improve the loss x 2.
                     # We use the start_block here rather than subtensor.block since this is when we started evaling the models.
                     # This will increase the temperature if we took a long time to beat the epsilon.
                     config.temperature = (start_block - last_update_block) * 2 # Doubling works well.
                     last_update_block = start_block 
                     
-                    # Upload the new best model.
+                    # Upload the new best model this is then pulled by all the miners.
                     upload_model(
                         wallet = wallet, 
                         model = model, 
@@ -186,6 +189,7 @@ def main( config ):
                         bucket = config.bucket,
                         CLIENT = CLIENT
                     )
+                    # Set weights to the miner who beat the epsilon first.
                     subtensor.set_weights(
                         wallet = wallet,
                         netuid = config.netuid,
@@ -199,6 +203,7 @@ def main( config ):
                         
                     # Break the loop here. This gives the earlier miners the advantage.
                     break
+                
 
                                             
         # Handle keyboard interrupts, stops training gracefully.
