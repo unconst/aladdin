@@ -1,28 +1,10 @@
-<h1>/\ |_ /\ |) |) | |\|</h1>
+<div style="text-align: center;">
+  <h1>/\ |_ /\ |) |) | |\|</h1>
+</div>
 
-# Installing Subtensor:
-```
-git clone git@github.com:opentensor/subtensor.git
-sudo apt update
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-sudo apt install -y git clang curl libssl-dev llvm libudev-dev
-sudo apt-get install protobuf-compiler
-rustup target add wasm32-unknown-unknown --toolchain stable-x86_64-unknown-linux-gnu
-```
-
-# Installing Python:
-```bash
-# Create a virtual environment with Python 3.11
-python3.11 -m venv venv
-
-# Activate the virtual environment
-source venv/bin/activate
-
-# Install the required packages
-pip install -r requirements.txt
-```
 
 # Installing S3
+Aladdin requires an AWS S3 bucket for internode communication. Follow these steps to set one up and set your environment vars. 
 1. **Create an AWS Account**:
    - If you don't already have an AWS account, go to [AWS](https://aws.amazon.com/) and create one.
 
@@ -58,7 +40,33 @@ pip install -r requirements.txt
    - This should list all your S3 buckets if the credentials are set up correctly.
 
 
+
+# Installing Subtensor:
+The demo makes use of a local subtensor chain. Run these commands to install Subtensor on your linux box.
+```
+git clone git@github.com:opentensor/subtensor.git
+sudo apt update
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt install -y git clang curl libssl-dev llvm libudev-dev
+sudo apt-get install protobuf-compiler
+rustup target add wasm32-unknown-unknown --toolchain stable-x86_64-unknown-linux-gnu
+```
+
+# Installing Python:
+Install the python dependencies.
+```bash
+# Create a virtual environment with Python 3.11
+python3.11 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install the required packages
+pip install -r requirements.txt
+```
+
 # Running:
+You can use the start script to pop up a network running the demo. The script does the following
 1. Deletes previous running processes from this script.
 2. Creates a local subtensor chain.
 3. Registers subnet 1.
@@ -72,7 +80,9 @@ pip install -r requirements.txt
 ```
 
 # Running additional Miners.
+Alternatively you can register your own miners on the subnet. (see start.sh for how to create one).
 ```bash
+btcli faucet (I cant remember the command) --wallet.name <your coldkey> --wallet.hotkey <your hotkey>
 btcli subnet register --netuid 1 --wallet.name <your coldkey> --wallet.hotkey <your hotkey> --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 python3 miner.py --netuid 1 --wallet.name <your coldkey> --wallet.hotkey <your hotkey> --device <your device> --subtensor.chain_endpoint ws://127.0.0.1:9946 
 ```
