@@ -1574,3 +1574,503 @@
 2024-09-06 20:34:54,760 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
 2024-09-06 20:34:54,852 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
 2024-09-06 20:34:54,936 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:34:55,852 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:34:56,761 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:56,761 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:56,761 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:56,761 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:56,761 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:56,761 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:56,761 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:56,852 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:34:57,852 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:34:58,731 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-06 20:34:58,732 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: stop_status
+2024-09-06 20:34:58,762 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:58,762 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:58,762 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:58,762 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:58,762 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:58,762 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:58,762 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:34:58,852 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:34:59,852 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:34:59,936 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:35:00,353 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:00,763 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:00,763 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:00,763 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:00,763 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:00,763 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:00,763 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:00,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:00,853 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:01,853 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:02,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:02,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:02,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:02,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:02,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:02,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:02,764 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:02,853 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:03,853 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:04,765 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:04,765 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:04,765 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:04,765 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:04,765 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:04,765 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:04,766 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:04,853 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:04,936 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:35:05,853 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:06,766 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:06,766 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:06,766 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:06,766 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:06,766 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:06,766 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:06,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:06,854 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:06,905 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:06,906 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:06,907 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:06,907 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:07,302 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:07,303 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:07,304 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:07,304 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:07,356 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:07,356 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:07,763 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:07,764 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:07,765 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:07,765 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:07,854 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:08,241 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:08,242 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:08,242 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:08,243 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:08,356 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:08,357 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:08,658 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:08,659 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:08,659 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:08,659 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:08,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:08,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:08,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:08,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:08,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:08,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:08,767 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:08,854 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:09,140 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:09,141 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:09,141 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:09,142 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:09,357 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:09,357 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:09,554 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:09,556 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:09,556 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:09,556 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:09,854 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:10,002 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:35:10,043 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:10,044 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:10,044 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:10,045 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:10,358 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:10,358 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:10,452 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:10,453 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:10,453 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:10,454 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:10,768 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:10,768 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:10,768 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:10,768 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:10,768 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:10,768 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:10,768 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:10,855 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:10,945 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:10,946 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:10,946 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:10,947 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:11,349 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:11,350 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:11,350 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:11,351 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:11,358 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:11,359 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:11,804 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:11,805 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:11,806 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:11,806 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:11,855 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:12,290 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:12,291 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:12,291 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:12,292 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:12,359 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:12,359 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:12,705 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:12,706 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:12,706 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:12,707 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:12,769 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:12,769 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:12,769 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:12,769 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:12,769 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:12,769 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:12,769 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:12,855 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:13,193 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:13,194 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:13,194 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:13,195 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:13,359 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:13,360 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:13,604 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:13,605 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:13,605 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:13,606 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:13,731 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-06 20:35:13,732 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: stop_status
+2024-09-06 20:35:13,855 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:14,095 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:14,096 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:14,097 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:14,097 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:14,360 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:14,360 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:14,502 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:14,503 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:14,503 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:14,503 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:14,770 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:14,770 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:14,770 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:14,770 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:14,770 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:14,770 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:14,770 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:14,855 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:14,995 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:14,996 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:14,996 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:14,997 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:15,360 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:15,361 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:15,401 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:35:15,402 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:15,402 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:15,403 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:15,403 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:15,856 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:15,856 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:15,859 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:15,860 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:15,860 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:16,344 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:16,345 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:16,345 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:16,346 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:16,361 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:16,361 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:16,756 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:16,757 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:16,757 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:16,758 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:16,771 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:16,771 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:16,771 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:16,771 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:16,771 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:16,771 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:16,771 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:16,856 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:17,246 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:17,247 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:17,247 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:17,248 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:17,361 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:17,363 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:17,657 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:17,658 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:17,659 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:17,659 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:17,856 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:18,149 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:18,150 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:18,150 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:18,151 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:18,362 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:18,362 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:18,557 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:18,558 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:18,559 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:18,559 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:18,772 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:18,772 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:18,772 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:18,772 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:18,772 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:18,772 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:18,772 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:18,856 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:19,050 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:19,051 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:19,051 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:19,052 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:19,363 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:19,363 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:19,459 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:19,460 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:19,460 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:19,461 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:19,856 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:19,955 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:19,956 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:19,956 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:19,957 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:20,363 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:20,364 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:20,365 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:20,366 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:20,366 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:20,367 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:20,773 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:20,773 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:20,773 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:20,773 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:20,773 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:20,773 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:20,773 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:20,818 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:35:20,819 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:20,820 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:20,820 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:20,821 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:20,856 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:21,309 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:21,310 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:21,310 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:21,311 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:21,364 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:21,364 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:21,722 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:21,723 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:21,723 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:21,724 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:21,857 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:22,215 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:22,216 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:22,216 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:22,217 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:22,364 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:22,365 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:22,628 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:22,629 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:22,629 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:22,629 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:22,774 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:22,774 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:22,774 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:22,774 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:22,774 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:22,774 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:22,774 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:22,857 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:22,886 DEBUG   SenderThread:733270 [sender.py:send():391] send: stats
+2024-09-06 20:35:23,120 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:23,122 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:23,122 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:23,123 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:23,365 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:23,365 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:23,532 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:23,534 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:23,534 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:23,534 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:23,857 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:24,025 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:24,026 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:24,026 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:24,027 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:24,365 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:24,366 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:24,437 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:24,439 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:24,439 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:24,439 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:24,774 ERROR   gpu       :733270 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-09-06 20:35:24,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:24,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:24,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:24,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:24,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:24,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:24,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:24,857 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:24,931 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:24,932 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:24,932 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:24,933 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:25,344 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:25,345 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:25,345 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:25,345 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:25,366 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:25,366 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:25,798 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:25,799 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:25,800 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:25,800 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:25,857 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:26,250 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:35:26,292 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:26,293 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:26,293 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:26,294 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:26,366 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:26,367 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:26,704 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:26,705 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:26,706 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:26,706 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:26,775 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:26,776 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:26,776 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:26,776 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:26,776 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:26,776 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:26,776 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:26,857 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:27,197 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:27,198 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:27,198 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:27,199 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:27,367 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:27,367 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:27,609 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:27,611 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:27,611 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:27,611 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:27,858 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:28,105 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:28,106 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:28,106 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:28,107 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:28,367 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:28,368 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:28,517 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:28,517 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:28,518 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:28,518 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:28,732 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-06 20:35:28,732 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: stop_status
+2024-09-06 20:35:28,776 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:28,777 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:28,777 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:28,777 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:28,777 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:28,777 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:28,777 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:28,858 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:29,012 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:29,013 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:29,013 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:29,014 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:29,368 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:29,368 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:29,426 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:29,427 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:29,427 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:29,429 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:29,858 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:29,919 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:29,921 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:29,921 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:29,922 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:30,335 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:30,336 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:30,337 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:30,337 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:30,368 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:30,369 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:30,777 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:30,778 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:30,778 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:30,778 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:30,778 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:30,778 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:30,778 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:30,786 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:30,787 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:30,788 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:30,788 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:30,858 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:31,285 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:31,286 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: status_report
+2024-09-06 20:35:31,286 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:31,286 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:31,287 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:31,369 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:31,369 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:31,698 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:31,699 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:31,699 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:31,700 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:31,858 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:32,193 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:32,194 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:32,194 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:32,195 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:32,369 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:32,370 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:32,605 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:32,606 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:32,607 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:32,607 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:32,778 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:32,779 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:32,779 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:32,779 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:32,779 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:32,779 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:32,779 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:32,858 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:33,101 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:33,102 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:33,102 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:33,103 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:33,370 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:33,371 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:33,516 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:33,517 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:33,517 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:33,518 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:33,859 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-06 20:35:34,012 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:34,013 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:34,013 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:34,014 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:34,371 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/output.log
+2024-09-06 20:35:34,371 INFO    Thread-12 :733270 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ubuntu/frontend/aladdin/wandb/run-20240906_203220-g2nug7x7/files/wandb-summary.json
+2024-09-06 20:35:34,427 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-06 20:35:34,428 DEBUG   SenderThread:733270 [sender.py:send():391] send: history
+2024-09-06 20:35:34,428 DEBUG   SenderThread:733270 [sender.py:send_request():418] send_request: summary_record
+2024-09-06 20:35:34,429 INFO    SenderThread:733270 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-06 20:35:34,779 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:34,780 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:34,780 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:34,780 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:34,780 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:34,780 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:34,780 ERROR   gpu       :733270 [interfaces.py:monitor():142] Failed to sample metric: Unknown Error
+2024-09-06 20:35:34,859 DEBUG   HandlerThread:733270 [handler.py:handle_request():158] handle_request: internal_messages

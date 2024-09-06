@@ -214,3 +214,76 @@ Processing batches: 83it [00:37,  2.21it/s]
 Loss: 2.721928358078003
 Loss: 2.352055072784424
 Loss: 2.743187189102173
+Uploading model to model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis
+Uploaded model to model-5GdqHCu2AdWCprqtQDsxDE6wdSZk2bzLGjto2okYLaqtpoMn.pt@decis in 7.5174033641815186 seconds.
+Processing batches: 0it [00:00, ?it/s]
+
+Processing batches: 5it [00:02,  2.23it/s]
+Loss: 2.1917736530303955
+Loss: 2.561782121658325
+Loss: 2.480321168899536
+
+Processing batches: 9it [00:04,  2.23it/s]
+Loss: 1.458724021911621
+Loss: 1.7471407651901245
+Loss: 1.7572758197784424
+
+Processing batches: 14it [00:06,  2.22it/s]
+Loss: 1.2977532148361206
+Loss: 1.7946715354919434
+Loss: 2.19950532913208
+Loss: 2.794036865234375
+
+Processing batches: 18it [00:08,  2.22it/s]
+Loss: 1.8780155181884766
+Loss: 1.623260498046875
+Loss: 2.089116334915161
+
+Processing batches: 23it [00:10,  2.22it/s]
+Loss: 2.197951078414917
+Loss: 1.1508581638336182
+Loss: 2.498788833618164
+Loss: 2.871302366256714
+
+Processing batches: 27it [00:12,  2.22it/s]
+Loss: 2.770439863204956
+Loss: 2.4229960441589355
+Loss: 1.9649688005447388
+
+Processing batches: 32it [00:14,  2.21it/s]
+Loss: 2.3075320720672607
+Loss: 2.8574821949005127
+Loss: 2.370626926422119
+Loss: 1.693710207939148
+
+Processing batches: 36it [00:16,  2.21it/s]
+Loss: 2.2243456840515137
+Loss: 1.8966487646102905
+Loss: 1.9019317626953125
+
+Processing batches: 40it [00:18,  2.21it/s]
+Loss: 2.908846855163574
+Loss: 1.9670166969299316
+Loss: 3.1507983207702637
+Loss: 2.9865832328796387
+
+Processing batches: 45it [00:20,  2.21it/s]
+Loss: 2.411266803741455
+Loss: 2.6917598247528076
+Loss: 2.0382111072540283
+
+Processing batches: 49it [00:22,  2.21it/s]
+Loss: 2.3895673751831055
+Loss: 1.911901831626892
+Loss: 2.09774112701416
+
+Processing batches: 54it [00:24,  2.21it/s]
+Loss: 2.64148211479187
+Loss: 1.4812672138214111
+Loss: 1.5101792812347412
+Loss: 3.123159885406494
+
+Processing batches: 58it [00:26,  2.20it/s]
+Loss: 3.7218477725982666
+Loss: 2.912457227706909
+Loss: 2.03560209274292
