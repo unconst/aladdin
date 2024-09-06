@@ -2,6 +2,8 @@ subtensor/
 *.ipynb
 venv/
 wandb/
+wandb/**
+
 *.pyc
 __pycache__/
 *.pyo

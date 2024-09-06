@@ -1,4 +1,0 @@
-
-Waiting for the master to upload the model. Sleeping for 5 seconds.
-Downloading model from model-5GvKEoc787uDV8etY1AM8vF385edu2iyqD1WfCjDugzLUiAL.pt@decis
-/home/ubuntu/frontend/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:654: UserWarning: Can't initialize NVML
