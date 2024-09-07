@@ -8,3 +8,4 @@ datasets
 torchvision
 wandb
 typer
+numpy

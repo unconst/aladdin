@@ -23,6 +23,7 @@ import torch
 import wandb
 import argparse
 import traceback
+import numpy as np
 import bittensor as bt
 from tqdm import tqdm
 from collections import deque
@@ -194,23 +195,27 @@ def main( config ):
                     torch.cuda.empty_cache()
                     
                 # Compute the avg loss on all batches from all pages.
-                avg_loss = sum( losses ) / len( losses )
+                median_loss = np.median(losses)
                 
                 # Uses an epsilon: (start_block - last_update_block)/temperature reduction.
                 # because we run the models in order of upload this puts the oldest model at an advantage.
                 # The epsilon decays slowly from config.epsilon until it hits 0 as the temperature term.
                 # As time progresses the temperature gets pushed further and further out simulating a slower annealing.
-                block_epsilon = config.epsilon - config.epsilon * min( 1, max(0, (start_block - last_update_block) / config.temperature ) )
-                threshold = best_loss - best_loss * block_epsilon
-                dif = avg_loss - threshold
-                print (f'BestLoss:{best_loss}, AvgLoss: {avg_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, Dif: {dif}, Temperature: {config.temperature} ')
+                if config.epsilon_method == 'linear':
+                    block_epsilon = config.epsilon * (1 - min(1, max(0, (start_block - last_update_block) / config.temperature)))
+                else:
+                    # Exponential epsilon with temperature/3 decays quicker and then converges around the temperature term. 
+                    block_epsilon = config.epsilon * math.exp(-(start_block - last_update_block) / (config.temperature / 3))
+                threshold = best_loss * (1 - block_epsilon) # Threshold based on decay.
+                dif = median_loss - threshold
+                print (f'BestLoss:{best_loss}, MedianLoss: {median_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, Dif: {dif}, Temperature: {config.temperature} ')
                 if config.use_wandb:
-                    wandb.log({ "AvgLoss": avg_loss, 'Epsilon': block_epsilon, 'Threshold': threshold, 'BestLoss': best_loss })
+                    wandb.log({ "MedianLoss": median_loss, 'Epsilon': block_epsilon, 'Threshold': threshold, 'BestLoss': best_loss })
                 
                 # If the average loss is less than the threshold give all incentive to this miner and upload the new state.                          
-                if avg_loss < threshold:
-                    print ('New best loss:', avg_loss )
-                    best_loss = avg_loss
+                if median_loss < threshold:
+                    print ('New best loss:', median_loss )
+                    best_loss = median_loss
                     
                     # Make the epsilon decay period equivalent to the duration it took to improve the loss.
                     # We use the start_block here rather than subtensor.block since this is when we started evaling the models.
@@ -222,7 +227,7 @@ def main( config ):
                     upload_model(
                         wallet = wallet, 
                         model = model, 
-                        extras = { 'sequence_length': config.sequence_length, 'tokenizer_name': config.tokenizer_name, 'loss': avg_loss }, 
+                        extras = { 'sequence_length': config.sequence_length, 'tokenizer_name': config.tokenizer_name }, 
                         bucket = config.bucket,
                         CLIENT = CLIENT
                     )
@@ -272,6 +277,7 @@ if __name__ == "__main__":
     parser.add_argument('--device', type=str, default='cuda:1', help='Device to use for training')
     parser.add_argument('--use_wandb', action='store_true', help='Use Weights and Biases for logging')
     parser.add_argument('--model_type', type=str, choices=['gpt2', 'llama'], default='gpt2', help='Model type to use: gpt2 or llama')
+    parser.add_argument('--epsilon_method', type=str, choices=['linear', 'exponential'], default='exponential', help='Epsilon decay method: linear or exponential')
     bt.wallet.add_args( parser )
     bt.subtensor.add_args( parser )
     config = bt.config( parser )   
