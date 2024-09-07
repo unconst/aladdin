@@ -114,15 +114,15 @@ def main( config ):
     # Remember delta for later removal.
     last_update_block = 0
     best_loss = 15 # Basically Infinity.
-    weights = torch.tensor(metagraph.n, dtype=torch.float32)
+    weights = torch.zeros( (metagraph.n), dtype=torch.float32)
     while True:
         try:
             
             # Resync bittensor objects to get latest state.
             subtensor = bt.subtensor( config = config )
             metagraph = subtensor.metagraph( netuid = config.netuid )
-            if metagraph.n > weights.size(0):
-                weights = torch.cat((weights, torch.zeros(metagraph.n - weights.size(0), dtype=torch.float32)))
+            if metagraph.n > len(weights):
+                weights = torch.cat((weights, torch.zeros(metagraph.n - len(weights), dtype=torch.float32)))
             
             # Get metadata from all miner models filtering None values, stale values and thrashing values.
             master_uid = metagraph.S.argmax()
@@ -237,7 +237,7 @@ def main( config ):
                     )
                     
                     # Set weights on the chain.
-                    weights = (1 - config.weights_alpha) * weights + config.weights_alpha * torch.nn.functional.one_hot(torch.tensor(next_uid), num_classes=weights.size(0)).float()
+                    weights = (1 - config.weights_alpha) * weights + config.weights_alpha * torch.nn.functional.one_hot(torch.tensor(next_uid), num_classes=len(weights)).float()
                     subtensor.set_weights(
                         wallet = wallet,
                         netuid = config.netuid,

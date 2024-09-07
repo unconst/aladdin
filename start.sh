@@ -52,12 +52,12 @@ done
 
 # Create Alice, Bob, Charlie, Dave, Eve, Ferdie
 echo "Creating wallets for Alice, Bob, Charlie, Dave, Eve, and Ferdie ..."
-python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Alice'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
-python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Bob'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
-python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Charlie'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
-python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Dave'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
-python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Eve'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
-python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Ferdie'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_new_hotkey( overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Alice'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_coldkey_from_uri( '/Alice', overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Bob'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_coldkey_from_uri( '/Bob', overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Charlie'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_coldkey_from_uri( '/Charlie', overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Dave'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_coldkey_from_uri( '/Dave', overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Eve'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_coldkey_from_uri( '/Eve', overwrite=True, use_password = False, suppress = False); print(w)"
+python3 -c "import bittensor as bt; w = bt.wallet( name = 'Alice', hotkey = 'Ferdie'); w.create_coldkey_from_uri('//Alice', overwrite=True, use_password = False, suppress = True); w.create_coldkey_from_uri( '/Ferdie', overwrite=True, use_password = False, suppress = False); print(w)"
 
 echo "Creating subnet 1 ... "
 btcli s create --wallet.name Alice --wallet.hotkey Alice --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
