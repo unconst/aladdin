@@ -175,7 +175,7 @@ def main( config ):
                 except Exception as e:
                     print(f"Error loading model: {e}")
                     continue
-                elif config.use_wandb:
+                if config.use_wandb:
                     wandb.log({ "EvalUID": next_uid})
 
                 # Iterate over the batches from these pages evaling the model.
