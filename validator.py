@@ -291,7 +291,7 @@ if __name__ == "__main__":
     parser.add_argument('--sequence_length', type=int, default=2048, help='Sequence Length.')
     parser.add_argument('--tokenizer_name', type=str, default='gpt2', help='Tokenizer name.')
     parser.add_argument('--num_pages', type=int, default=1, help='Number of pages to load')
-    parser.add_argument('--device', type=str, default='cuda:1', help='Device to use for training')
+    parser.add_argument('--device', type=str, default='cuda', help='Device to use for training')
     parser.add_argument('--use_wandb', action='store_true', help='Use Weights and Biases for logging')
     parser.add_argument('--model_type', type=str, choices=['gpt2', 'llama'], default='gpt2', help='Model type to use: gpt2 or llama')
     parser.add_argument('--epsilon_method', type=str, choices=['linear', 'exponential'], default='exponential', help='Epsilon decay method: linear or exponential')
