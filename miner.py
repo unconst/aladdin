@@ -99,6 +99,8 @@ def main( config ):
                 print("Waiting for the master to upload the model. Sleeping for 5 seconds.")
                 time.sleep(5)    
                 continue
+            if config.use_wandb:
+                wandb.log({ "Master": master.uid } )
             
             # If the master has a newer model, download it.
             if current == None or master.last_modified > current.last_modified:
