@@ -156,6 +156,8 @@ def main( config ):
             to_delete = get_metadata( my_uid, metagraph, subtensor, CLIENT = CLIENT )
             if to_delete != None:
                 CLIENT.delete_object( Bucket = config.bucket, Key = to_delete.filename )
+            if config.use_wandb:
+                wandb.finish()
             break
         
         # Handle unknown exceptions, continue training after 5 seconds.
@@ -167,6 +169,7 @@ def main( config ):
 # Main function.
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Miner script')
+    parser.add_argument('--name', type=str, default='miner', help='Optional miner name')
     parser.add_argument('--netuid', type=int, default=1, help='Bittensor network uid.')
     parser.add_argument('--bucket', type=str, default='decis', help='S3 bucket name')
     parser.add_argument('--batch_size', type=int, default=4, help='Batch size for training')
