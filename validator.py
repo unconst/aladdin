@@ -162,6 +162,8 @@ def main( config ):
                 elif new_meta.last_modified != next_meta.last_modified: # The model has updated.
                     metadata.appendleft((next_uid, new_meta)) # Send to the back.
                     continue
+                elif config.use_wandb:
+                    wandb.log({ "EvalUID": next_uid})
                 
                 # Load the model.
                 try:
@@ -196,7 +198,7 @@ def main( config ):
                     del input_ids, labels, outputs
                     torch.cuda.empty_cache()
                     
-                # Compute the mdeian loss on all batches from all pages.
+                # Compute the median loss on all batches from all pages.
                 median_loss = np.median(losses)
                 
                 # Uses an epsilon: (start_block - last_update_block)/temperature reduction.
@@ -222,7 +224,7 @@ def main( config ):
                     # Make the epsilon decay period equivalent to the duration it took to improve the loss.
                     # We use the start_block here rather than subtensor.block since this is when we started evaling the models.
                     # This will increase the temperature if we took a long time to beat the epsilon.
-                    config.temperature = (start_block - last_update_block)
+                    config.temperature = max( config.min_temperature, min( (start_block - last_update_block), config.max_temperature ) )
                     last_update_block = start_block 
                     
                     # Upload the new best model this is then pulled by all the miners.
@@ -278,6 +280,8 @@ if __name__ == "__main__":
     parser.add_argument('--netuid', type=int, default=1, help='Bittensor network uid.')
     parser.add_argument('--bucket', type=str, default='decis', help='S3 bucket name')
     parser.add_argument('--temperature', type=int, default=100, help='Starting epsilon decay range.')
+    parser.add_argument('--max_temperature', type=int, default=14400, help='Maximum temperature in blocks.')
+    parser.add_argument('--min_temperature', type=int, default=100, help='Minimum temperature in blocks.')
     parser.add_argument('--epsilon', type=float, default=0.1, help='Starting epsilon value.')
     parser.add_argument('--batch_size', type=int, default=4, help='Batch size for training')
     parser.add_argument('--sequence_length', type=int, default=2048, help='Sequence Length.')
