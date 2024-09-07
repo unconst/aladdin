@@ -122,7 +122,7 @@ def main( config ):
             subtensor = bt.subtensor( config = config )
             metagraph = subtensor.metagraph( netuid = config.netuid )
             if metagraph.n > len(weights):
-                weights = torch.cat((weights, torch.zeros(metagraph.n - len(weights), dtype=torch.float32)))
+                weights = torch.cat((weights, torch.zeros((metagraph.n - len(weights)), dtype=torch.float32)))
             
             # Get metadata from all miner models filtering None values, stale values and thrashing values.
             master_uid = metagraph.S.argmax()
