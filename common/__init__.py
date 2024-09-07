@@ -200,8 +200,7 @@ def upload_model(
         Bucket=bucket,
         Key=metadata_filename,
         GrantRead='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
-        GrantReadACP='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
-        GrantList='uri="http://acs.amazonaws.com/groups/global/AllUsers"'
+        GrantReadACP='uri="http://acs.amazonaws.com/groups/global/AllUsers"'
     )
 
     # Upload the model to the storage service
@@ -215,8 +214,7 @@ def upload_model(
         Bucket=bucket,
         Key=filename,
         GrantRead='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
-        GrantReadACP='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
-        GrantList='uri="http://acs.amazonaws.com/groups/global/AllUsers"'
+        GrantReadACP='uri="http://acs.amazonaws.com/groups/global/AllUsers"'
     )
 
     # Log the completion of the upload process with the time taken
