@@ -188,7 +188,7 @@ if __name__ == "__main__":
     parser.add_argument('--optimizer_beta2', type=float, default=0.95, help='Beta2 for the optimizer')
     parser.add_argument('--optimizer_weight_decay', type=float, default=0.1, help='Weight decay for the optimizer')
     parser.add_argument('--num_pages', type=int, default=5, help='Number of pages to load')
-    parser.add_argument('--device', type=str, default='cuda:1', help='Device to use for training')
+    parser.add_argument('--device', type=str, default='cuda', help='Device to use for training')
     parser.add_argument('--use_wandb', action='store_true', help='Use Weights and Biases for logging')
     bt.wallet.add_args( parser )
     bt.subtensor.add_args( parser )
