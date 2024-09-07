@@ -104,9 +104,8 @@ def main( config ):
             
             # If the master has a newer model, download it.
             if current == None or master.last_modified > current.last_modified:
-                current = master
-                model = download_model( metadata = current, device = config.device, CLIENT = CLIENT )
-                tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained( current.tokenizer_name, verbose=False, clean_up_tokenization_spaces=True )
+                model = download_model( metadata = master, device = config.device, CLIENT = CLIENT )
+                tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained( master.tokenizer_name, verbose=False, clean_up_tokenization_spaces=True )
                 tokenizer.pad_token = tokenizer.eos_token    
                 optimizer = optim.AdamW(
                     model.parameters(),
@@ -114,6 +113,7 @@ def main( config ):
                     betas = ( config.optimizer_beta1, config.optimizer_beta2 ), # B1 and B2
                     weight_decay = config.optimizer_weight_decay  # Weight decay
                 )
+                current = master
                 
             # Load training dataset pages.
             dataset = SubsetFineWebEdu2Loader( 
