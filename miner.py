@@ -88,7 +88,8 @@ def main( config ):
         try:
             
             # Get metadata from the master (the key with the most amount of stake.)
-            # Descends the stake list until finds a master with stake otherwise.
+            # Descends the stake list until it finds a master with stake.
+            master = None
             for uid in metagraph.S.argsort(descending=True):
                 master = get_metadata(uid, metagraph, subtensor, CLIENT = CLIENT)
                 if master is not None:
