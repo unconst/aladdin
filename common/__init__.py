@@ -195,11 +195,29 @@ def upload_model(
     metadata_buffer = io.BytesIO(json.dumps(extras).encode('utf-8'))  # Create a buffer for the metadata
     CLIENT.upload_fileobj(metadata_buffer, bucket, metadata_filename)  # Upload the metadata buffer to the storage service
 
+    # Grant read and list permissions to all users for the metadata
+    CLIENT.put_object_acl(
+        Bucket=bucket,
+        Key=metadata_filename,
+        GrantRead='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
+        GrantReadACP='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
+        GrantList='uri="http://acs.amazonaws.com/groups/global/AllUsers"'
+    )
+
     # Upload the model to the storage service
     with io.BytesIO() as module_buffer:
         torch.save(model_state_dict, module_buffer)  # Save the model state dictionary to the buffer
         module_buffer.seek(0)  # Reset the buffer's position to the beginning
         CLIENT.upload_fileobj(module_buffer, bucket, filename)  # Upload the model buffer to the storage service
+
+    # Grant read and list permissions to all users for the model
+    CLIENT.put_object_acl(
+        Bucket=bucket,
+        Key=filename,
+        GrantRead='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
+        GrantReadACP='uri="http://acs.amazonaws.com/groups/global/AllUsers"',
+        GrantList='uri="http://acs.amazonaws.com/groups/global/AllUsers"'
+    )
 
     # Log the completion of the upload process with the time taken
     print(f"Uploaded model to {filename}@{bucket} in {time.time() - start_time} seconds.")

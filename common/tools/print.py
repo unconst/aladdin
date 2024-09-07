@@ -36,8 +36,6 @@ from transformers import AutoTokenizer
 from transformers import GPT2Config, GPT2LMHeadModel
 env_config = {**dotenv_values(".env"), **os.environ}
 
-from ..common import SubsetFineWebEdu2Loader
-
 def main(
     bucket: str = 'decis',
     aws_access_key_id: str = env_config.get('AWS_ACCESS_KEY_ID'),
