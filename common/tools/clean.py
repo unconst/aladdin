@@ -33,7 +33,6 @@ import torch.optim as optim
 from dotenv import dotenv_values
 from types import SimpleNamespace
 from transformers import AutoTokenizer
-from dataset import SubsetFineWebEdu2Loader
 from transformers import GPT2Config, GPT2LMHeadModel
 
 env_config = {**dotenv_values(".env"), **os.environ}

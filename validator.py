@@ -264,8 +264,12 @@ def main( config ):
             to_delete = get_metadata( my_uid, metagraph, subtensor, CLIENT = CLIENT )
             if to_delete != None:
                 CLIENT.delete_object( Bucket = config.bucket, Key = to_delete.filename )
+            # Finish and delete the run.
             if config.use_wandb:
                 wandb.finish()
+                api = wandb.Api()
+                run = api.run(f"{wandb.run.entity}/{wandb.run.project}/{wandb.run.id}")
+                run.delete()
             break
         
         # Handle unknown exceptions, continue training after 5 seconds.

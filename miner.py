@@ -165,6 +165,9 @@ def main( config ):
                 CLIENT.delete_object( Bucket = config.bucket, Key = to_delete.filename )
             if config.use_wandb:
                 wandb.finish()
+                api = wandb.Api()
+                run = api.run(f"{wandb.run.entity}/{wandb.run.project}/{wandb.run.id}")
+                run.delete()
             break
         
         # Handle unknown exceptions, continue training after 5 seconds.
