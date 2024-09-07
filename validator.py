@@ -74,53 +74,55 @@ def main( config ):
         subtensor.commit( wallet, config.netuid, config.bucket)
     print('\tBucket:', config.bucket )
     
-    # Build the tokenizer and optimizer.
+    # Build the tokenizer.
     tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained( config.tokenizer_name, verbose=False, clean_up_tokenization_spaces=True )
     tokenizer.pad_token = tokenizer.eos_token        
     print ('\tTokenizer:', config.tokenizer_name)
 
     # Init model based on type.
-    if config.model_type == 'gpt2':
-        model = GPT2LMHeadModel( config = GPT2Config(
-            output_hidden_states = False, 
-            n_positions = config.sequence_length
-        ))
-    elif config.model_type == 'llama':
-        model = LlamaForCausalLM( config = LlamaConfig(
-            vocab_size = tokenizer.vocab_size,     
-            hidden_size = 2040,   
-            num_hidden_layers = 12,  
-            num_attention_heads = 12,
-            intermediate_size = 6144
-        ))
-    print (f'\tModel: {config.model_type}')
-    
-    # Upload my state.
-    upload_model(
-        wallet = wallet, 
-        model = model, 
-        extras = { 'sequence_length': config.sequence_length, 'tokenizer_name': config.tokenizer_name }, 
-        bucket = config.bucket,
-        CLIENT = CLIENT
-    )
-    # (Optional) Clone the base model for comparisions later.
-    # We might want to put limits on how far off the base model the updates are.
-    # base_model: torch.nn.Module = copy.deepcopy(model.cpu())
+    if not config.resume:
+        # If we are not resuming (i.e. new run) We create and upload the initial model.
+        if config.model_type == 'gpt2':
+            model = GPT2LMHeadModel( config = GPT2Config(
+                output_hidden_states = False, 
+                n_positions = config.sequence_length
+            ))
+        elif config.model_type == 'llama':
+            model = LlamaForCausalLM( config = LlamaConfig(
+                vocab_size = tokenizer.vocab_size,     
+                hidden_size = 2040,   
+                num_hidden_layers = 12,  
+                num_attention_heads = 12,
+                intermediate_size = 6144
+            ))
+        print (f'\tModel: {config.model_type}')
+        upload_model(
+            wallet = wallet, 
+            model = model, 
+            extras = { 'sequence_length': config.sequence_length, 'tokenizer_name': config.tokenizer_name }, 
+            bucket = config.bucket,
+            CLIENT = CLIENT
+        )
     
     # Init weights and biases
     if config.use_wandb:
-        wandb.init(project='aladdin', name = f'{wallet.name}-{wallet.hotkey_str}', config = config )
+        if config.resume:
+            wandb.init(project='aladdin', resume='allow', name = f'{wallet.name}-{wallet.hotkey_str}', config = config )
+        else:
+            wandb.init(project='aladdin', name = f'{wallet.name}-{wallet.hotkey_str}', config = config )
         
     # Remember delta for later removal.
     last_update_block = 0
     best_loss = 15 # Basically Infinity.
-    model = None
+    weights = torch.tensor(metagraph.n, dtype=torch.float32)
     while True:
         try:
             
             # Resync bittensor objects to get latest state.
             subtensor = bt.subtensor( config = config )
             metagraph = subtensor.metagraph( netuid = config.netuid )
+            if metagraph.n > weights.size(0):
+                weights = torch.cat((weights, torch.zeros(metagraph.n - weights.size(0), dtype=torch.float32)))
             
             # Get metadata from all miner models filtering None values, stale values and thrashing values.
             master_uid = metagraph.S.argmax()
@@ -194,7 +196,7 @@ def main( config ):
                     del input_ids, labels, outputs
                     torch.cuda.empty_cache()
                     
-                # Compute the avg loss on all batches from all pages.
+                # Compute the mdeian loss on all batches from all pages.
                 median_loss = np.median(losses)
                 
                 # Uses an epsilon: (start_block - last_update_block)/temperature reduction.
@@ -205,7 +207,7 @@ def main( config ):
                     block_epsilon = config.epsilon * (1 - min(1, max(0, (start_block - last_update_block) / config.temperature)))
                 else:
                     # Exponential epsilon with temperature/3 decays quicker and then converges around the temperature term. 
-                    block_epsilon = config.epsilon * math.exp(-(start_block - last_update_block) / (config.temperature / 3))
+                    block_epsilon = config.epsilon * math.exp(-(start_block - last_update_block) / (config.temperature / 5))
                 threshold = best_loss * (1 - block_epsilon) # Threshold based on decay.
                 dif = median_loss - threshold
                 print (f'BestLoss:{best_loss}, MedianLoss: {median_loss}, Epsilon: {block_epsilon}, Threshold: {threshold}, Dif: {dif}, Temperature: {config.temperature} ')
@@ -231,18 +233,25 @@ def main( config ):
                         bucket = config.bucket,
                         CLIENT = CLIENT
                     )
-                    # Set weights to the miner who beat the epsilon first.
-                    # TODO (const): Add this back in.
-                    # subtensor.set_weights(
-                    #     wallet = wallet,
-                    #     netuid = config.netuid,
-                    #     uids = [ next_uid ],
-                    #     weights = [ 1.0 ], # TODO (const): there might be something better than this possibly using a moving average?
-                    #     wait_for_inclusion = False,
-                    #     wait_for_finalization = False
-                    # )  
+                    
+                    # Set weights on the chain.
+                    weights = (1 - config.weights_alpha) * weights + config.weights_alpha * torch.nn.functional.one_hot(torch.tensor(next_uid), num_classes=weights.size(0)).float()
+                    subtensor.set_weights(
+                        wallet = wallet,
+                        netuid = config.netuid,
+                        uids = metagraph.uids,
+                        weights = weights,
+                        wait_for_inclusion = False,
+                        wait_for_finalization = False
+                    )  
+                    print ( '\tWeights', weights.tolist() )
                     if config.use_wandb:
                         wandb.log({ "BestUID": next_uid, "Temperature": config.temperature })
+                        # Log the top weights values
+                        top_k = min(5, weights.size(0))
+                        top_k_values, top_k_indices = torch.topk(weights, top_k)
+                        for i, (value, idx) in enumerate(zip(top_k_values, top_k_indices)):
+                            wandb.log({ f"top_weights_{i}": value.item() })
                         
                     # Break the loop here. This gives the earlier miners the advantage.
                     break
@@ -278,6 +287,8 @@ if __name__ == "__main__":
     parser.add_argument('--use_wandb', action='store_true', help='Use Weights and Biases for logging')
     parser.add_argument('--model_type', type=str, choices=['gpt2', 'llama'], default='gpt2', help='Model type to use: gpt2 or llama')
     parser.add_argument('--epsilon_method', type=str, choices=['linear', 'exponential'], default='exponential', help='Epsilon decay method: linear or exponential')
+    parser.add_argument('--resume', action='store_true', default=False, help='Resume previous training.')
+    parser.add_argument('--weights_alpha', type=float, default=0.1, help='Alpha value for moving average of weights. Higher values preference the current best model.')
     bt.wallet.add_args( parser )
     bt.subtensor.add_args( parser )
     config = bt.config( parser )   

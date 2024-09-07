@@ -22,6 +22,7 @@ import math
 import time
 import json
 import torch
+import hashlib
 import tempfile
 import bittensor as bt
 from types import SimpleNamespace
@@ -183,6 +184,8 @@ def upload_model(
             'model_type': 'gpt2',  # Add model type to extras
             'model_config': config.to_dict()  # Add model configuration to extras
         })
+    # Add model hashes.
+    extras['model_has'] = hash_model( model )
 
     # Generate filenames for the model and its metadata
     filename = f'model-{wallet.hotkey.ss58_address}.pt'  # Filename for the model
