@@ -2,21 +2,25 @@ pm2 delete all
 
 # Super hacky way of setting these vars.
 sed -i 's/Self::set_target_registrations_per_interval(netuid, 1);/Self::set_target_registrations_per_interval(netuid, 10);/' subtensor/pallets/subtensor/src/coinbase/root.rs
-
-# Parse command line arguments for --bucket and --use-wandb
+# Parse command line arguments for --bucket, --use-wandb, and --model_type
 while [[ "$#" -gt 0 ]]; do
     case $1 in
         --bucket) bucket="$2"; shift ;;
         --use-wandb) use_wandb=true ;;
+        --model_type) model_type="$2"; shift ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
 done
 
 # Set default values if not provided
+
+# Set default values if not provided
+model_type=${model_type:-'gpt2'}
 bucket=${bucket:-'decis'}
 use_wandb=${use_wandb:-false}
 
+echo "Model Type: $model_type"
 echo "Using bucket: $bucket"
 echo "Use Weights and Biases: $use_wandb"
 
@@ -93,14 +97,14 @@ btcli s metagraph --no_prompt --subtensor.chain_endpoint ws://127.0.0.1:9946
 # Start all.
 if [ "$use_wandb" = true ]; then
     wandb login
-    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket --use_wandb
+    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket --use_wandb --model_type $model_type
     pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Alice --wallet.hotkey Bob --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket --use_wandb --learning_rate 0.00001
     pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Alice --wallet.hotkey Charlie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket --use_wandb --learning_rate 0.00005
     pm2 start miner.py --interpreter python3 --name Dave -- --wallet.name Alice --wallet.hotkey Dave --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:3 --bucket $bucket --use_wandb --learning_rate 0.0001
     pm2 start miner.py --interpreter python3 --name Eve -- --wallet.name Alice --wallet.hotkey Eve --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:4 --bucket $bucket --use_wandb --learning_rate 0.0005
     pm2 start miner.py --interpreter python3 --name Ferdie -- --wallet.name Alice --wallet.hotkey Ferdie --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:5 --bucket $bucket --use_wandb --learning_rate 0.001
 else
-    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket
+    pm2 start validator.py --interpreter python3 --name Alice -- --wallet.name Alice --wallet.hotkey Alice --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:0 --bucket $bucket --model_type $model_type
     pm2 start miner.py --interpreter python3 --name Bob -- --wallet.name Alice --wallet.hotkey Bob  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:1 --bucket $bucket
     pm2 start miner.py --interpreter python3 --name Charlie -- --wallet.name Alice --wallet.hotkey Charlie  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:2 --bucket $bucket
     pm2 start miner.py --interpreter python3 --name Dave -- --wallet.name Alice --wallet.hotkey Dave  --subtensor.chain_endpoint ws://127.0.0.1:9946 --device cuda:3 --bucket $bucket

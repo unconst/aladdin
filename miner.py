@@ -98,12 +98,11 @@ def main( config ):
                 model = download_model( metadata = current, device = config.device, CLIENT = CLIENT )
                 tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained( current.tokenizer_name, verbose=False, clean_up_tokenization_spaces=True )
                 tokenizer.pad_token = tokenizer.eos_token    
-                def random_perturbation(value, perturbation=0.25): return value * (1 + random.uniform(-perturbation, perturbation))
                 optimizer = optim.AdamW(
                     model.parameters(),
-                    lr = random_perturbation(config.learning_rate),  # Peak learning rate with pertubation.
-                    betas = ( random_perturbation(config.optimizer_beta1), random_perturbation(config.optimizer_beta2) ), # B1 and B2
-                    weight_decay = random_perturbation(config.optimizer_weight_decay)  # Weight decay
+                    lr = config.learning_rate,  # Peak learning rate
+                    betas = ( config.optimizer_beta1, config.optimizer_beta2 ), # B1 and B2
+                    weight_decay = config.optimizer_weight_decay  # Weight decay
                 )
                 
             # Load training dataset pages.
@@ -145,10 +144,7 @@ def main( config ):
                 model = model, 
                 wallet = wallet, 
                 bucket = config.bucket,
-                extras = {
-                    "tokenizer_name": current.tokenizer_name,
-                    "sequence_length": current.sequence_length
-                },
+                extras = {},
                 CLIENT = CLIENT
             )
                         
@@ -170,7 +166,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Miner script')
     parser.add_argument('--netuid', type=int, default=1, help='Bittensor network uid.')
     parser.add_argument('--bucket', type=str, default='decis', help='S3 bucket name')
-    parser.add_argument('--batch_size', type=int, default=6, help='Batch size for training')
+    parser.add_argument('--batch_size', type=int, default=4, help='Batch size for training')
     parser.add_argument('--learning_rate', type=float, default=0.0001, help='Learning rate for the optimizer')
     parser.add_argument('--optimizer_beta1', type=float, default=0.9, help='Beta1 for the optimizer')
     parser.add_argument('--optimizer_beta2', type=float, default=0.95, help='Beta2 for the optimizer')

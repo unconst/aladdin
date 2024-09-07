@@ -30,6 +30,7 @@ from dotenv import dotenv_values
 from types import SimpleNamespace
 from transformers import AutoTokenizer
 from transformers import GPT2Config, GPT2LMHeadModel
+from transformers import LlamaForCausalLM, LlamaConfig, LlamaTokenizer
 from typing import Dict, Optional
 
 from common import upload_model, get_metadata, download_model, SubsetFineWebEdu2Loader
@@ -72,21 +73,32 @@ def main( config ):
         subtensor.commit( wallet, config.netuid, config.bucket)
     print('\tBucket:', config.bucket )
     
-    # Init model.
-    configuration = GPT2Config( output_hidden_states = False, n_positions = config.sequence_length )
-    model = GPT2LMHeadModel( config = configuration )
-    print ('\tInit Model.')
-    
     # Build the tokenizer and optimizer.
     tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained( config.tokenizer_name, verbose=False, clean_up_tokenization_spaces=True )
     tokenizer.pad_token = tokenizer.eos_token        
     print ('\tTokenizer:', config.tokenizer_name)
+
+    # Init model based on type.
+    if config.model_type == 'gpt2':
+        model = GPT2LMHeadModel( config = GPT2Config(
+            output_hidden_states = False, 
+            n_positions = config.sequence_length
+        ))
+    elif config.model_type == 'llama':
+        model = LlamaForCausalLM( config = LlamaConfig(
+            vocab_size = tokenizer.vocab_size,     
+            hidden_size = 2040,   
+            num_hidden_layers = 12,  
+            num_attention_heads = 12,
+            intermediate_size = 6144
+        ))
+    print (f'\tModel: {config.model_type}')
     
     # Upload my state.
     upload_model(
         wallet = wallet, 
         model = model, 
-        extras = { 'sequence_length': config.sequence_length, 'tokenizer_name': config.tokenizer_name, 'loss': 10000000 }, 
+        extras = { 'sequence_length': config.sequence_length, 'tokenizer_name': config.tokenizer_name }, 
         bucket = config.bucket,
         CLIENT = CLIENT
     )
@@ -101,6 +113,7 @@ def main( config ):
     # Remember delta for later removal.
     last_update_block = 0
     best_loss = 15 # Basically Infinity.
+    model = None
     while True:
         try:
             
@@ -149,7 +162,11 @@ def main( config ):
                 
                 # Load the model.
                 try:
-                    model = download_model( metadata = next_meta, device = config.device, CLIENT = CLIENT )
+                    if 'model' in locals() and model != None:
+                        del model
+                    torch.cuda.empty_cache()
+                    model = download_model( metadata = next_meta, device = 'cpu', CLIENT = CLIENT )
+                    model.to(config.device)
                     tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained( config.tokenizer_name, verbose=False, clean_up_tokenization_spaces=True )
                     tokenizer.pad_token = tokenizer.eos_token
                 except Exception as e:
@@ -167,9 +184,14 @@ def main( config ):
                     labels[:, :-1] = input_ids[:, 1:]
                     labels[:, -1] = tokenizer.pad_token_id
 
-                    # Forward pass
-                    outputs = model( input_ids=input_ids, labels=labels )
+                    # Forward pass without gradient memory.
+                    with torch.no_grad():
+                        outputs = model( input_ids=input_ids, labels=labels )
                     losses.append( outputs.loss.item() )
+                    
+                    # Clear cache to prevent memory leaks
+                    del input_ids, labels, outputs
+                    torch.cuda.empty_cache()
                     
                 # Compute the avg loss on all batches from all pages.
                 avg_loss = sum( losses ) / len( losses )
@@ -190,17 +212,17 @@ def main( config ):
                     print ('New best loss:', avg_loss )
                     best_loss = avg_loss
                     
-                    # Make the epsilon decay period equivalent to the duration it took to improve the loss x 2.
+                    # Make the epsilon decay period equivalent to the duration it took to improve the loss.
                     # We use the start_block here rather than subtensor.block since this is when we started evaling the models.
                     # This will increase the temperature if we took a long time to beat the epsilon.
-                    config.temperature = (start_block - last_update_block) * 2 # Doubling works well.
+                    config.temperature = (start_block - last_update_block)
                     last_update_block = start_block 
                     
                     # Upload the new best model this is then pulled by all the miners.
                     upload_model(
                         wallet = wallet, 
                         model = model, 
-                        extras = { 'sequence_length': next_meta.sequence_length, 'tokenizer_name': next_meta.tokenizer_name, 'loss': avg_loss }, 
+                        extras = { 'sequence_length': config.sequence_length, 'tokenizer_name': config.tokenizer_name, 'loss': avg_loss }, 
                         bucket = config.bucket,
                         CLIENT = CLIENT
                     )
@@ -243,12 +265,13 @@ if __name__ == "__main__":
     parser.add_argument('--bucket', type=str, default='decis', help='S3 bucket name')
     parser.add_argument('--temperature', type=int, default=100, help='Starting epsilon decay range.')
     parser.add_argument('--epsilon', type=float, default=0.1, help='Starting epsilon value.')
-    parser.add_argument('--batch_size', type=int, default=6, help='Batch size for training')
+    parser.add_argument('--batch_size', type=int, default=4, help='Batch size for training')
     parser.add_argument('--sequence_length', type=int, default=2048, help='Sequence Length.')
     parser.add_argument('--tokenizer_name', type=str, default='gpt2', help='Tokenizer name.')
-    parser.add_argument('--num_pages', type=int, default=5, help='Number of pages to load')
+    parser.add_argument('--num_pages', type=int, default=1, help='Number of pages to load')
     parser.add_argument('--device', type=str, default='cuda:1', help='Device to use for training')
     parser.add_argument('--use_wandb', action='store_true', help='Use Weights and Biases for logging')
+    parser.add_argument('--model_type', type=str, choices=['gpt2', 'llama'], default='gpt2', help='Model type to use: gpt2 or llama')
     bt.wallet.add_args( parser )
     bt.subtensor.add_args( parser )
     config = bt.config( parser )   
