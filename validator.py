@@ -107,9 +107,9 @@ def main( config ):
     # Init weights and biases
     if config.use_wandb:
         if config.resume:
-            wandb.init(project='aladdin', resume='allow', name = f'{wallet.name}-{wallet.hotkey_str}', config = config )
+            wandb.init(project='aladdin', resume='allow', name = f'{config.name}-{wallet.name}-{wallet.hotkey_str}', config = config )
         else:
-            wandb.init(project='aladdin', name = f'{wallet.name}-{wallet.hotkey_str}', config = config )
+            wandb.init(project='aladdin', name = f'{config.name}-{wallet.name}-{wallet.hotkey_str}', config = config )
         
     # Remember delta for later removal.
     last_update_block = 0
@@ -224,7 +224,7 @@ def main( config ):
                     # Make the epsilon decay period equivalent to the duration it took to improve the loss.
                     # We use the start_block here rather than subtensor.block since this is when we started evaling the models.
                     # This will increase the temperature if we took a long time to beat the epsilon.
-                    config.temperature = max( config.min_temperature, min( (start_block - last_update_block), config.max_temperature ) )
+                    config.temperature = (start_block - last_update_block)
                     last_update_block = start_block 
                     
                     # Upload the new best model this is then pulled by all the miners.
@@ -276,12 +276,10 @@ def main( config ):
 # Main function.
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Miner script')
-    parser.add_argument('--name', type=str, default='miner', help='Name of the miner')
+    parser.add_argument('--name', type=str, default='validator', help='Optional name')
     parser.add_argument('--netuid', type=int, default=1, help='Bittensor network uid.')
     parser.add_argument('--bucket', type=str, default='decis', help='S3 bucket name')
     parser.add_argument('--temperature', type=int, default=100, help='Starting epsilon decay range.')
-    parser.add_argument('--max_temperature', type=int, default=14400, help='Maximum temperature in blocks.')
-    parser.add_argument('--min_temperature', type=int, default=100, help='Minimum temperature in blocks.')
     parser.add_argument('--epsilon', type=float, default=0.1, help='Starting epsilon value.')
     parser.add_argument('--batch_size', type=int, default=4, help='Batch size for training')
     parser.add_argument('--sequence_length', type=int, default=2048, help='Sequence Length.')

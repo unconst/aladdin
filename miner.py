@@ -73,10 +73,13 @@ def main( config ):
     except Exception:
         subtensor.commit( wallet, config.netuid, config.bucket)
     print('\tBucket:', config.bucket , '\n')
-            
+                    
     # Init weights and biases
     if config.use_wandb:
-        wandb.init(project='aladdin', name = f'{wallet.name}-{wallet.hotkey_str}', config = config )
+        if config.resume:
+            wandb.init(project='aladdin', resume='allow', name = f'{config.name}-{wallet.name}-{wallet.hotkey_str}', config = config )
+        else:
+            wandb.init(project='aladdin', name = f'{config.name}-{wallet.name}-{wallet.hotkey_str}', config = config )
         
     # Main training loop.
     model = None
