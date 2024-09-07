@@ -162,8 +162,6 @@ def main( config ):
                 elif new_meta.last_modified != next_meta.last_modified: # The model has updated.
                     metadata.appendleft((next_uid, new_meta)) # Send to the back.
                     continue
-                elif config.use_wandb:
-                    wandb.log({ "EvalUID": next_uid})
                 
                 # Load the model.
                 try:
@@ -177,7 +175,9 @@ def main( config ):
                 except Exception as e:
                     print(f"Error loading model: {e}")
                     continue
-                
+                elif config.use_wandb:
+                    wandb.log({ "EvalUID": next_uid})
+
                 # Iterate over the batches from these pages evaling the model.
                 model.eval()
                 losses = []
