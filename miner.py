@@ -26,6 +26,7 @@ import typer
 import argparse
 import tempfile
 import bittensor as bt
+import numpy as np
 from tqdm import tqdm
 import torch.optim as optim
 from dotenv import dotenv_values
