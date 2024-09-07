@@ -88,9 +88,12 @@ def main( config ):
         try:
             
             # Get metadata from the master (the key with the most amount of stake.)
-            # TODO: Take the key with the second, third etc until you find someone who is online.
-            master = get_metadata( metagraph.S.argmax(), metagraph, subtensor, CLIENT = CLIENT )
-            if master == None:
+            # Descends the stake list until finds a master with stake otherwise.
+            for uid in metagraph.S.argsort(descending=True):
+                master = get_metadata(uid, metagraph, subtensor, CLIENT = CLIENT)
+                if master is not None:
+                    break
+            if master is None:
                 print("Waiting for the master to upload the model. Sleeping for 5 seconds.")
                 time.sleep(5)    
                 continue
